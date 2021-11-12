@@ -20,6 +20,8 @@
 
 ### 3. 代码实现：
 
+**java版本：**
+
 ```JAVA
 /*
 // Definition for a Node.
@@ -73,7 +75,7 @@ class Solution {
 
 
 ```
-
+**C++版本：**
 
 ```C++
 class Solution {
