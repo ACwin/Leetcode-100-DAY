@@ -72,6 +72,7 @@ class Solution {
 
 **C++实现：**
 ```C++
+/*
 class Node {
 public:
     int val;
