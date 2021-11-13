@@ -85,5 +85,5 @@ class Solution(object):
 
 **复杂度分析：**
 
-    时间复杂度：O(max(M,N))O(max(M, N))O(max(M,N))，MMM 和 NNN 分别是字符串 a 和 b 的长度；
-    空间复杂度：O(1)O(1)O(1)，只使用了常数的空间。
+    时间复杂度：O(max(M,N))，M 和 N 分别是字符串 a 和 b 的长度；
+    空间复杂度：O(1)，只使用了常数的空间。
