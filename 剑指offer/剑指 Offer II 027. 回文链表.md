@@ -1,7 +1,16 @@
-### 1.题目描述：
+### 1.题目描述
 
+ **[剑指 Offer II 027. 回文链表](https://leetcode-cn.com/problems/aMhZSa/)** 
+ 
 ![图片](https://user-images.githubusercontent.com/42907149/141489573-a65f9d07-c9dd-4733-9a6e-5738fe3b6ab0.png)
 
+**提示：**
+
+- 链表 L 的长度范围为 [1, 105]
+- 0 <= node.val <= 9
+
+
+---------------------------------------------
 
 ### 2.代码实现：
 
