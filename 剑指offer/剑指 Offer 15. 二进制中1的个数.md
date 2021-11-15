@@ -118,7 +118,7 @@ class Solution:
 
 **Java版本：**
 ```Java
-#方法二：巧用 n&(n−1)
+//方法二：巧用 n&(n−1)
 public class Solution {
     public int hammingWeight(int n) {
         int res = 0;
