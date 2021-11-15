@@ -1,7 +1,12 @@
 ### 1.题目描述
 
+ **[剑指 Offer II 022. 链表中环的入口节点](https://leetcode-cn.com/problems/c32eOV/)** 
+
 ![图片](https://user-images.githubusercontent.com/42907149/141491561-d9331599-80ad-475b-bfbc-bbf085e7af33.png)
 
+注意：本题与lc 142 题相同： https://leetcode-cn.com/problems/linked-list-cycle-ii/
+
+----------------------------
 
 ### 2.代码实现：
 
