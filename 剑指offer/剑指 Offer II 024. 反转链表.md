@@ -1,7 +1,12 @@
 ### 1.题目描述
 
+ **[剑指 Offer II 024. 反转链表](https://leetcode-cn.com/problems/UHnkqh/)** 
+
 ![图片](https://user-images.githubusercontent.com/42907149/141491040-e2a48160-eb68-4c4d-b50a-7a189365bdf0.png)
 
+注意：本题与lc 206 题相同： https://leetcode-cn.com/problems/reverse-linked-list/
+
+------------------------------------
 
 ### 2.代码实现：
 
