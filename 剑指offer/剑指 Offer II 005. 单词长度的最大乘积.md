@@ -37,8 +37,7 @@
 ### 2.思路分析：
 
 1. 利用二进制特性 0：false 1：true 把每个单词中的每个字符都保存起来
-2. 
-3. 然后利用二进制值 与 的特性：
+2. 然后利用二进制值 与 的特性：
 ```
 - 0 & 0 = 0
 - 0 & 1 = 1 
@@ -48,7 +47,7 @@
 
 依次比较两个单词中每个字符，记录一个字母是否出现(从右向左方向)。
 
-4. 最后比较两个字符串是否存在相同字母时，使用 flags[i] & flags[j]) == 0
+3. 最后比较两个字符串是否存在相同字母时，使用 flags[i] & flags[j]) == 0
 
 
 
@@ -63,10 +62,9 @@ class Solution {
         for(int i = 0; i < words.length; i++){
             for(char ch:words[i].toCharArray()){
                 flags[i]|= 1 << (ch - 'a');
-
             }
-
         }
+        
         int result = 0;
         for(int i = 0; i < words.length; i++){
             for(int j =  i + 1; j < words.length; j++){
@@ -79,7 +77,6 @@ class Solution {
 
         }
         return result;
-
     }
 }
 ```
@@ -107,14 +104,12 @@ public:
                 if((flags[i] & flags[j]) == 0){
                     int prod = words[i].size() * words[j].size();
                     result = max(result, prod);
-
                 }
 
             }
 
         }
          return result;
-
     }
 };
 ```
