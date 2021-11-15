@@ -28,6 +28,13 @@
 
 ### 2.思路分析：
 
+1. 由于数组中的元素都在 int（即 32 位整数）范围内，因此我们可以依次计算答案的每一个二进制位是 0还是 1；
+其中**bitSums[i]:** 用来保存数组nums中所有整数的二进制形式的第i个数位之和。
+
+2. 其次如果一个数字出现3次，它的二进制每一位也出现的3次。如果把所有出现三次的数字的二进制的每一位都分别加起来，那么每一位都能被3整除。
+3. 对于数组中的每一个元素 x，我们使用位运算 **(x >> i) & 1** 得到 x的第 i个二进制位，并将它们相加再对 3取余，得到的结果一定为0或 1，即为答案的第 i 个二进制位。
+
+
 使用 **与运算** ，可获取二进制数字 num 的最右一位 n1:
 - **n1=num&i**
 
@@ -35,7 +42,6 @@
 
 - **num=num>>>1**
 
-建立一个长度为 32 的数组 counts，通过以上方法可记录所有数字的各二进制位的 1的出现次数。
 
 
 ### 3.代码实现：
@@ -46,20 +52,21 @@
 ```Java
 class Solution {
     public int singleNumber(int[] nums) {
-        int[] counts = new int[32];
-        for(int i = 0; i < nums.length; i++) {
-            for(int j = 0; j < 32; j++) {
-                counts[j] += nums[i] & 1; // 更新第 j 位
-                nums[i] >>>= 1; // 第 j 位 --> 第 j + 1 位
+        int[] bigSums = new int[32];
+        for(int num : nums){
+            for(int i = 0; i < 32; i++){
+                bigSums[i] += (num >> (31-i)) & 1;
+
+
             }
         }
+        int result = 0;
+        for(int i = 0; i < 32; i++){
+            result = (result << 1 ) + bigSums[i] % 3;
 
-        int res = 0, m = 3;
-        for(int i = 0; i < 32; i++) {
-            res <<= 1;// 左移 1 位
-            res |= counts[31 - i] % m;
         }
-        return res;
+        return result;
+
     }
 }
 ```
