@@ -1,8 +1,16 @@
 ### 1.题目描述
 
+ **[剑指 Offer II 026. 重排链表](https://leetcode-cn.com/problems/LGjMqU/)** 
+
 
 ![图片](https://user-images.githubusercontent.com/42907149/141490174-f42e5b9a-e258-4f96-a87d-cd6b649c2424.png)
 
+**提示：**
+
+- 链表的长度范围为 [1, 5 * 104]
+- 1 <= node.val <= 1000
+
+----------------------------------
 
 ### 2.代码实现：
 
