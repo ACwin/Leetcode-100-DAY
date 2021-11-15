@@ -1,8 +1,14 @@
 ### 1.题目描述
 
+ **[剑指 Offer II 023. 两个链表的第一个重合节点](https://leetcode-cn.com/problems/3u1WK4/)** 
+
 ![图片](https://user-images.githubusercontent.com/42907149/141491294-876f0838-642b-485a-8017-0581bcd6d485.png)
 
 
+注意：本题与lc 160 题相同：https://leetcode-cn.com/problems/intersection-of-two-linked-lists/
+
+
+-----------------------------
 
 ### 2.代码实现：
 
