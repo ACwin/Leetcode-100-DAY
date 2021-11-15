@@ -91,26 +91,28 @@ class Solution {
 public:
     int maxProduct(vector<string>& words) {
         int n = words.size();
-        //存储words[i]的二进制
-        int states[n];
+        int flags[n];
         for(int i = 0; i < n; i++){
-            states[i] = 0;
+            flags[i] = 0;
             for(int j = 0; j < words[i].size(); j++){
-                //words[i][j] - 'a' 代表对应哪个位
-                states[i] |= (1 << (words[i][j] - 'a'));
+
+                flags[i] |= (1 << (words[i][j] - 'a'));
             }
         }
-        int ans = 0;
+        int result = 0;
         for(int i = 0; i < n; i++){
             for(int j = i + 1; j < n; j++){
-                //等于0说明两者不相等
-                if((states[i] & states[j]) == 0){
-                    int tmp = words[i].size() * words[j].size();
-                    ans = max(ans, tmp);
+                if((flags[i] & flags[j]) == 0){
+                    int prod = words[i].size() * words[j].size();
+                    result = max(result, prod);
+
                 }
+
             }
+
         }
-        return ans;
+         return result;
+
     }
 };
 ```
