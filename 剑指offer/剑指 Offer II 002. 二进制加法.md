@@ -1,6 +1,12 @@
-### 1.题目描述：
+### 1.题目描述
+
+ **[剑指 Offer II 002. 二进制加法](https://leetcode-cn.com/problems/JFETK5/)** 
 
 ![image](https://user-images.githubusercontent.com/42907149/141610804-b2b1556f-9e46-4ca7-b192-c97f92e21ad0.png)
+
+注意：本题与lc 67 题相同：https://leetcode-cn.com/problems/add-binary/
+
+--------------------------------------
 
 ### 2.解题思路：
 
@@ -13,6 +19,8 @@
     - carry 不为 0 需进位；
     - 向结果字符串 result 拼接的顺序是向后拼接，返回时需要把  result 反转 。
 
+
+### 3.代码实现：
 
 **JAVA版本：**
 
