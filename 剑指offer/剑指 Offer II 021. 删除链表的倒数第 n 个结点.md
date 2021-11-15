@@ -1,6 +1,13 @@
 ### 1.题目描述
+
+ **[剑指 Offer II 021. 删除链表的倒数第 n 个结点](https://leetcode-cn.com/problems/SLwz0R/)** 
+ 
 ![图片](https://user-images.githubusercontent.com/42907149/141491743-697bca7c-7d43-4754-8fa6-2cffc7bd02be.png)
 
+注意：本题与lc 19 题相同： https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/
+
+
+----------------------------
 
 ### 2.代码实现：
 
