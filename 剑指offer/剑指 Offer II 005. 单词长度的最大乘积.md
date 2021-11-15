@@ -95,13 +95,15 @@ public:
         for(int i = 0; i < n; i++){
             flags[i] = 0;
             for(int j = 0; j < words[i].size(); j++){
-
+            
+                //words[i][j] - 'a' 代表对应哪个位
                 flags[i] |= (1 << (words[i][j] - 'a'));
             }
         }
         int result = 0;
         for(int i = 0; i < n; i++){
             for(int j = i + 1; j < n; j++){
+                //等于0说明两者不相等
                 if((flags[i] & flags[j]) == 0){
                     int prod = words[i].size() * words[j].size();
                     result = max(result, prod);
