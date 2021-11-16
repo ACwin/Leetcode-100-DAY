@@ -507,17 +507,16 @@ private void afterErgodic(Node x,Queue<Key> keys)：使用后序遍历，把指�
 ```
 那么层序遍历的结果是：EBGADFHC
 我们在4.4中创建的树上，添加层序遍历的API：
-public Queue<Key> layerErgodic()：使用层序遍历，获
-取整个树中的所有键
-实现步骤：
-1.创建队列，存储每一层的结点；
-2.使用循环从队列中弹出一个结点：
- 2.1获取当前结点的key；
- 2.2如果当前结点的左子结点不为空，则把左子结点放入到队列中
- 2.3如果当前结点的右子结点不为空，则把右子结点放入到队列中
-
+public Queue<Key> layerErgodic()：使用层序遍历，获取整个树中的所有键
 ```
-
+**实现步骤：**
+```
+1. 创建队列，存储每一层的结点；
+2. 使用循环从队列中弹出一个结点：
+ 2.1 获取当前结点的key；
+ 2.2 如果当前结点的左子结点不为空，则把左子结点放入到队列中
+ 2.3 如果当前结点的右子结点不为空，则把右子结点放入到队列中
+```
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20201105140510636.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3VuaXF1ZV9wZXJmZWN0,size_16,color_FFFFFF,t_70#pic_center)
 
 ```java
@@ -556,7 +555,6 @@ public Queue<Key> layerErgodic()：使用层序遍历，获
             }
         }
     }
-
 ```
 
 ### 7. 二叉树的最大深度问题
@@ -564,20 +562,21 @@ public Queue<Key> layerErgodic()：使用层序遍历，获
 > 给定一棵树，请计算树的最大深度（树的根节点到最远叶 子结点的最长路径上的结点数）
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20201105010437232.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3VuaXF1ZV9wZXJmZWN0,size_16,color_FFFFFF,t_70#pic_center)
-
+ 
+```
 上面这棵树的最大深度为4。
-**实现：**
+实现：
 添加如下的API求最大深度：
 public int maxDepth()：计算整个树的最大深度
 private int maxDepth(Node x):计算指定树x的最大深度
+```
 **实现步骤：**
-
+```
 1. 如果根结点为空，则最大深度为0；
 2. 计算左子树的最大深度；
 3. 计算右子树的最大深度；
 4. 当前树的最大深度=左子树的最大深度和右子树的最大,深度中的较大者+1
-   
-
+```   
 ```java
  //计算整个树的最大深度
     public int maxDepth() {
