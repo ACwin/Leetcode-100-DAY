@@ -323,11 +323,13 @@ public class Test {
 
 **1. 前序遍历:**
 
-public Queue<Key> preErgodic()：使用前序遍历，获取整个树中的所有键
-private void preErgodic(Node x,Queue<Key> keys)：使用前序遍历，把指定树x中的所有键放入到keys队列中;
+public Queue<Key> preErgodic():使用前序遍历，获取整个树中的所有键
+ 
+private void preErgodic(Node x,Queue<Key> keys):使用前序遍历，把指定树x中的所有键放入到keys队列中;
 实现过程中，我们通过前序遍历，把,把每个结点的键取出，放入到队列中返回即可。
 
 **实现步骤：**
+ 
 1. 把当前结点的key放入到队列中;
  
 2. 找到当前结点的左子树，如果不为空，递归遍历左子树
@@ -385,6 +387,7 @@ public Queue<Key> midErgodic()：使用中序遍历，获取整个树中的所�
 private void midErgodic(Node x,Queue<Key> keys)：使用中序遍历，把指定树x中的所有键放入到keys队列中
  
 **实现步骤：**
+ 
 1.找到当前结点的左子树，如果不为空，递归遍历左子树
  
 2.把当前结点的key放入到队列中;
@@ -448,7 +451,7 @@ private void afterErgodic(Node x,Queue<Key> keys)：使用后序遍历，把指�
  
 2. 找到当前结点的右子树，如果不为空，递归遍历右子树
  
-3. 把当前结点的key放入到队列中;
+3. 把当前结点的key放入到队列中
 
 
 ```Java
