@@ -384,6 +384,7 @@ private void preErgodic(Node x,Queue<Key> keys):使用前序遍历，把指定�
 **2.中序遍历:**
  
 public Queue<Key> midErgodic()：使用中序遍历，获取整个树中的所有键
+ 
 private void midErgodic(Node x,Queue<Key> keys)：使用中序遍历，把指定树x中的所有键放入到keys队列中
  
 **实现步骤：**
