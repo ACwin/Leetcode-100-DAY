@@ -120,7 +120,7 @@ private class Node<Key,Value>{
 
 
 
-```java
+```Java
 //二叉树代码
 public class BinaryTree<Key extends Comparable<Key>, Value> {
     //记录根结点
@@ -272,7 +272,7 @@ public class Test {
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20201105001622257.png#pic_center)
 
-```java
+```Java
     //找出整个树中最小的键
     public Key min(){
         return min(root).key;
@@ -293,7 +293,7 @@ public class Test {
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20201105004127888.png#pic_center)
 
-```java
+```Java
    //找出整个树中最大的键
     public Key max(){
         return max(root).key;
@@ -340,7 +340,7 @@ private void preErgodic(Node x,Queue<Key> keys)：使用前序遍历，把指定
 2. 找到当前结点的左子树，如果不为空，递归遍历左子树
 3. 找到当前结点的右子树，如果不为空，递归遍历右子树
 
-```java
+```Java
     //使用前序遍历，获取整个树中的所有键
     public Queue<Key> preErgodic(){
         Queue<Key> keys = new Queue<>();
@@ -397,7 +397,7 @@ private void midErgodic(Node x,Queue<Key> keys)：使用中序遍历，把指定
 2. 把当前结点的key放入到队列中;
 3. 找到当前结点的右子树，如果不为空，递归遍历右子树
 
-```
+```Java
  //使用中序遍历，获取整个树中的所有键
     public Queue<Key> midErgodic(){
         Queue<Key> keys = new Queue<>();
@@ -454,7 +454,7 @@ private void afterErgodic(Node x,Queue<Key> keys)：使用后序遍历，把指�
 2. 找到当前结点的右子树，如果不为空，递归遍历右子树
 3. 把当前结点的key放入到队列中;
 
-```
+```Java
 //使用后序遍历，获取整个树中的所有键
     public Queue<Key> afterErgodic(){
         Queue<Key> keys = new Queue<>();
@@ -745,4 +745,3 @@ public class PaperFolding {
     }
 }
 ```
-
