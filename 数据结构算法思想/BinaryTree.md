@@ -1,4 +1,6 @@
-## 1.树的特点：
+
+
+1.树的特点：
 
  1.每个结点有零个或多个子结点；
 
@@ -12,24 +14,19 @@
 
 **1）结点的度：**
 一个结点含有的子树的个数称为该结点的度；
-
 **2）叶结点：**
 度为0的结点称为叶结点，也可以叫做终端结点
-
 **3）分支结点：**
 度不为0的结点称为分支结点，也可以叫做非终端结点
-
 **4）结点的层次：**
 从根结点开始，根结点的层次为1，根的直接后继层次为2，以
 此类推结点的层序编号：
 将树中的结点，按照从上层到下层，同层从左到右的次序排
 成一个线性序列，把他们编成连续的自然数。
-
 **5）树的度：**
 树中所有结点的度的最大值
 树的高度(深度)：
 树中结点的最大层次
-
 **6）森林：**
  m（m>=0）个互不相交的树的集合，将一颗非空树的根结
  点删去，树就变成一个森林；给森林增加一个统一的根
@@ -53,7 +50,7 @@
 
 ### 4.1 二叉树的结点类
 
-**结点类API设计：**
+结点类API设计：
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20201104215731934.png#pic_center)
 
@@ -310,32 +307,34 @@ public class Test {
 ### 5.二叉树的基础遍历
 
 二叉树的遍历分为以下三种方式：
+
 1. **前序遍历:**
-先访问根结点，然后再访问左子树，最后访问右子树
+   先访问根结点，然后再访问左子树，最后访问右子树
 
 2. **中序遍历:**
-先访问左子树，中间访问根节点，最后访问右子树
+   先访问左子树，中间访问根节点，最后访问右子树
 
 3. **后序遍历:**
-先访问左子树，再访问右子树，最后访问根节点
+   先访问左子树，再访问右子树，最后访问根节点
 
--------------------
 
-**1. 前序遍历:**
 
-public Queue<Key> preErgodic():使用前序遍历，获取整个树中的所有键
- 
-private void preErgodic(Node x,Queue<Key> keys):使用前序遍历，把指定树x中的所有键放入到keys队列中;
-实现过程中，我们通过前序遍历，把,把每个结点的键取出，放入到队列中返回即可。
+-------------------------
+
+
+
+**1.前序遍历:**
+
+```
+public Queue<Key> preErgodic()：使用前序遍历，获取整个树中的所有个数
+private void preErgodic(Node x,Queue<Key> keys)：使用前序遍历，把指定树x中的所有键放入到keys队列中
+```
 
 **实现步骤：**
- 
-1. 把当前结点的key放入到队列中;
- 
-2. 找到当前结点的左子树，如果不为空，递归遍历左子树
- 
-3. 找到当前结点的右子树，如果不为空，递归遍历右子树
 
+1. 把当前结点的key放入到队列中;
+2. 找到当前结点的左子树，如果不为空，递归遍历左子树
+3. 找到当前结点的右子树，如果不为空，递归遍历右子树
 
 ```java
     //使用前序遍历，获取整个树中的所有键
@@ -382,21 +381,19 @@ private void preErgodic(Node x,Queue<Key> keys):使用前序遍历，把指定�
 ```
 
 **2.中序遍历:**
- 
+
+```
 public Queue<Key> midErgodic()：使用中序遍历，获取整个树中的所有键
- 
 private void midErgodic(Node x,Queue<Key> keys)：使用中序遍历，把指定树x中的所有键放入到keys队列中
- 
+```
+
 **实现步骤：**
- 
-1.找到当前结点的左子树，如果不为空，递归遍历左子树
- 
-2.把当前结点的key放入到队列中;
- 
-3.找到当前结点的右子树，如果不为空，递归遍历右子树
 
+1. 找到当前结点的左子树，如果不为空，递归遍历左子树
+2. 把当前结点的key放入到队列中;
+3. 找到当前结点的右子树，如果不为空，递归遍历右子树
 
-```Java
+```
  //使用中序遍历，获取整个树中的所有键
     public Queue<Key> midErgodic(){
         Queue<Key> keys = new Queue<>();
@@ -440,22 +437,20 @@ private void midErgodic(Node x,Queue<Key> keys)：使用中序遍历，把指定
 
 ```
 
-**3. 后序遍历:**
- 
+**3.后序遍历:**
+
+```
 public Queue<Key> afterErgodic()：使用后序遍历，获取整个树中的所有键
- 
 private void afterErgodic(Node x,Queue<Key> keys)：使用后序遍历，把指定树x中的所有键放入到keys队列中
- 
+```
+
 **实现步骤：**
- 
+
 1. 找到当前结点的左子树，如果不为空，递归遍历左子树
- 
 2. 找到当前结点的右子树，如果不为空，递归遍历右子树
- 
-3. 把当前结点的key放入到队列中
+3. 把当前结点的key放入到队列中;
 
-
-```Java
+```
 //使用后序遍历，获取整个树中的所有键
     public Queue<Key> afterErgodic(){
         Queue<Key> keys = new Queue<>();
@@ -504,19 +499,18 @@ private void afterErgodic(Node x,Queue<Key> keys)：使用后序遍历，把指�
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20201105140317339.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3VuaXF1ZV9wZXJmZWN0,size_16,color_FFFFFF,t_70#pic_center)
 
+> 那么层序遍历的结果是：EBGADFHC
+
 ```
-那么层序遍历的结果是：EBGADFHC
-我们在4.4中创建的树上，添加层序遍历的API：
 public Queue<Key> layerErgodic()：使用层序遍历，获取整个树中的所有键
+实现步骤：
+1.创建队列，存储每一层的结点；
+2.使用循环从队列中弹出一个结点：
+ 2.1获取当前结点的key；
+ 2.2如果当前结点的左子结点不为空，则把左子结点放入到队列中
+ 2.3如果当前结点的右子结点不为空，则把右子结点放入到队列中
 ```
-**实现步骤：**
-```
-1. 创建队列，存储每一层的结点；
-2. 使用循环从队列中弹出一个结点：
- 2.1 获取当前结点的key；
- 2.2 如果当前结点的左子结点不为空，则把左子结点放入到队列中
- 2.3 如果当前结点的右子结点不为空，则把右子结点放入到队列中
-```
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20201105140510636.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3VuaXF1ZV9wZXJmZWN0,size_16,color_FFFFFF,t_70#pic_center)
 
 ```java
@@ -555,6 +549,7 @@ public Queue<Key> layerErgodic()：使用层序遍历，获取整个树中的所
             }
         }
     }
+
 ```
 
 ### 7. 二叉树的最大深度问题
@@ -562,21 +557,25 @@ public Queue<Key> layerErgodic()：使用层序遍历，获取整个树中的所
 > 给定一棵树，请计算树的最大深度（树的根节点到最远叶 子结点的最长路径上的结点数）
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20201105010437232.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3VuaXF1ZV9wZXJmZWN0,size_16,color_FFFFFF,t_70#pic_center)
- 
+
+> 上面这棵树的最大深度为4。
+
+**实现：**
+
 ```
-上面这棵树的最大深度为4。
-实现：
 添加如下的API求最大深度：
 public int maxDepth()：计算整个树的最大深度
 private int maxDepth(Node x):计算指定树x的最大深度
 ```
+
 **实现步骤：**
-```
+
 1. 如果根结点为空，则最大深度为0；
 2. 计算左子树的最大深度；
 3. 计算右子树的最大深度；
 4. 当前树的最大深度=左子树的最大深度和右子树的最大,深度中的较大者+1
-```   
+   
+
 ```java
  //计算整个树的最大深度
     public int maxDepth() {
@@ -619,7 +618,6 @@ private int maxDepth(Node x):计算指定树x的最大深度
             System.out.println(i);
         }
     }
-
 ```
 
 ### 8. 折纸问题
@@ -648,7 +646,6 @@ down；N=2时，打印： down down up
 1.根结点为下折痕；
 2.每一个结点的左子结点为下折痕；
 3.每一个结点的右子结点为上折痕；
-
 ```
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20201105010724290.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3VuaXF1ZV9wZXJmZWN0,size_16,color_FFFFFF,t_70#pic_center)
