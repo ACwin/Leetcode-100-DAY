@@ -156,26 +156,29 @@ class Solution {
  */
 class Solution {
 public:
-    map<int, int> mp;
-    int target, ans;
-    int pathSum(TreeNode* root, int targetSum) {
-        target = targetSum;
-        mp[0] = 1;
-        dfs(root, 0);
-        return ans;
+
+    int count = 0;
+    int pathSum(TreeNode *root, int targetSum)
+    {
+        if (!root)
+            return 0;
+        dfs(root, targetSum);            //以root为起始点查找路径
+        pathSum(root->left, targetSum);  //左子树递归
+        pathSum(root->right, targetSum); //右子树递归
+        return count;
     }
 
-    void dfs(TreeNode* node, int sum) {
-        if (node == NULL)
+    void dfs(TreeNode *root, int sum)
+    {
+        if (!root)
             return;
-        sum += node->val;
-        ans += mp[sum - target];
-        if (mp.find(sum) != mp.end()) mp[sum]++;
-        else mp[sum] = 1;
-        dfs(node->left, sum);
-        dfs(node->right, sum);
-        mp[sum]--;
+        sum -= root->val;
+        if (sum == 0) //注意不要return,因为不要求到叶节点结束,所以一条路径下面还可能有另一条
+            count++;  //如果找到了一个路径全局变量就+1
+        dfs(root->left, sum);
+        dfs(root->right, sum);
     }
+
 };
 ```
 
